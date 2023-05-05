@@ -1,0 +1,31 @@
+### Get all rider profiles
+GET http://localhost:3000/api/rider_in_react
+
+### Get select rider information
+GET http://localhost:3000/api/rider_in_react/2
+
+### Create a new rider for the database
+POST http://localhost:3000/api/rider_in_react
+Content-Type: application/json
+
+{
+    "name": "Keaneau R",
+    "age": 55,
+    "motorcycle": "KRGT 1000",
+    "riding_style": "cruiser",
+    "biography": "John Wick, Mr. Anderson, and your worst nightmare",
+    "images" : null
+}
+
+### Update rider information
+PATCH http://localhost:3000/api/rider_in_react/3
+Content-Type: application/json
+
+{
+    "motorcycle": "AJP PR7",
+    "riding_style": "dualsport",
+    "age": 35
+}
+
+### Delete rider account, profile, and information
+DELETE http://localhost:3000/api/rider_in_react/5
