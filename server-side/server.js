@@ -44,12 +44,12 @@ app.post("/api/rider_in_react", (req, res) => {
     .query(
       `INSERT INTO rider_profiles (name, age, motorcycle, riding_style, biography, images) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
       [
-        req.body.name,
-        req.body.age,
-        req.body.motorcycle,
-        req.body.riding_style,
-        req.body.biography,
-        req.body.images,
+        req.body.name || null,
+        req.body.age || null,
+        req.body.motorcycle || null,
+        req.body.riding_style || null,
+        req.body.biography || null,
+        req.body.images|| null,
       ]
     )
     .then((result) => {
